@@ -7,3 +7,5 @@ services:
     ports:
       - 2022:22
     restart: always
+    environment:
+        HUB_PASSWD: "test"
