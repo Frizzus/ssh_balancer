@@ -1,6 +1,6 @@
 FROM debian:trixie
 # ENV HUB_PASSWD "dfE45$£d-@1"
-COPY . /home/hub/
+COPY ./src/ /home/hub/
 RUN apt update
 RUN apt install -y openssh-server
 RUN useradd hub
