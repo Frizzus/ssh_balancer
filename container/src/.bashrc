@@ -33,3 +33,4 @@ echo $pass | sudo -S chown -R $username:$username "/home/$username/"
 echo $pass | sudo -S chmod -R 750 "/home/$username"
 echo "$username:$user_pass" | sudo chpasswd
 sudo -u $username -i
+# ssh $username@localhost
