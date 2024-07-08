@@ -1,0 +1,18 @@
+#! /usr/bin/bash
+
+service ssh start 
+if test -z $HUB_PASSWD
+then 
+  echo "\$HUB_PASSWD is not set ! Exiting !"
+  exit 1
+fi
+echo "hub:$HUB_PASSWD" | chpasswd
+echo "HUB_PASSWD=$HUB_PASSWD" >> /home/hub/.env
+if test -z $USERNAME
+then
+  USERNAME="default_"
+fi
+echo "USERNAME=$USERNAME" >> /home/hub/.env
+
+tail -f /dev/null
+
