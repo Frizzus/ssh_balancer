@@ -12,7 +12,7 @@ fi
 
 
 username=${USERNAME}
-while grep "${USERNAME}${count}" $user_pool_file
+while grep -q "${USERNAME}${count}" $user_pool_file
 do 
   count=`expr $count + 1`
   username="${USERNAME}${count}"
