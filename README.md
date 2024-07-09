@@ -4,8 +4,8 @@
 - Choosing the base name of the user by defining the $USERNAME environment variable.
 - Choosing the password of the "hub" user.
 - making the created users having a randomly generated password.
+- Installing software and configuring the root user
 
 ## Feature not available now
-- le docker prendra un fichier contenant les logiciels a installer via apt
 - le docker prendra un dossier qui sera placé dans /home/{user}
 

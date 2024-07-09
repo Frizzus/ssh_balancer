@@ -1,5 +1,6 @@
 FROM debian:trixie
 COPY ./src/ /home/hub/
+COPY ./user_files/ /home/hub/user_files/
 COPY ./20-hub /etc/sudoers.d/
 COPY ./env_setup /root/
 COPY ./custom/root_setup.sh /root/

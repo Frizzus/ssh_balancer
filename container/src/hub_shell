@@ -23,6 +23,7 @@ user_pass=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9%-=' | fold -w 32 | head -n 1)
 sudo useradd $username
 sudo sed -i -e "s/\/bin\/sh/\/usr\/bin\/bash/" /etc/passwd
 sudo mkdir "/home/$username"
+sudo cp -r ./user_files/* "/home/$username/"
 sudo chown -R $username:$username "/home/$username/"
 sudo chmod -R 750 "/home/$username"
 echo "$username:$user_pass" | sudo chpasswd
