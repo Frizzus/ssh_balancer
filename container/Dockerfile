@@ -2,6 +2,8 @@ FROM debian:trixie
 COPY ./src/ /home/hub/
 COPY ./20-hub /etc/sudoers.d/
 COPY ./env_setup /root/
+COPY ./custom/root_setup.sh /root/
+COPY ./custom/sudoers.custom.d/ /etc/sudoers.d/sudoers.custom.d/
 RUN apt update
 RUN apt install -y openssh-server
 RUN apt install -y sudo
@@ -10,4 +12,5 @@ RUN sed -i -e "s/\/bin\/sh/\/home\/hub\/hub_shell/" /etc/passwd
 RUN chown -R hub:hub /home/hub/
 RUN chmod -R 700 /home/hub/
 RUN chmod -R 700 /root/env_setup
+RUN bash /root/root_setup.sh
 CMD . /root/env_setup
