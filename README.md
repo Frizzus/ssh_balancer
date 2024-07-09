@@ -5,7 +5,7 @@
 - Choosing the password of the "hub" user.
 - making the created users having a randomly generated password.
 - Installing software and configuring the root user
+- copying files within the user directory by putting files inside "user_files"
 
 ## Feature not available now
-- le docker prendra un dossier qui sera placé dans /home/{user}
 
