@@ -8,4 +8,6 @@
 - copying files within the user directory by putting files inside "user_files"
 
 ## Feature not available now
-
+- having the same ssh key at each restart to avoid having to delete a public key each time
+- Executing a script to customize each user.
+- Having custom scripts to help customize user.
