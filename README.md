@@ -1,6 +1,11 @@
-- [x] installer openssh-server sur le debian par défaut
-- [x] créer un utilisateur qui servira a rediriger les utilisateurs (pas dans le script python mais dans le Dockerfile)
-- [x] le mot de passe de l'utilisateur pourra être changé avec des variables d'environnement
+## Features available
+- Connecting to a central user "hub" create a new user from a pool a redirect to it.
+- The created user will be deleted on disconnect and made available again.
+- Choosing the base name of the user by defining the $USERNAME environment variable.
+- Choosing the password of the "hub" user.
+- making the created users having a randomly generated password.
+
+## Feature not available now
 - le docker prendra un fichier contenant les logiciels a installer via apt
 - le docker prendra un dossier qui sera placé dans /home/{user}
 

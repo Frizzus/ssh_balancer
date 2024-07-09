@@ -18,7 +18,7 @@ do
   username="${USERNAME}${count}"
 done
 echo -n "$username" >> $user_pool_file
-user_pass="test2"
+user_pass=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9%-=' | fold -w 32 | head -n 1)
 
 sudo useradd $username
 sudo sed -i -e "s/\/bin\/sh/\/usr\/bin\/bash/" /etc/passwd
