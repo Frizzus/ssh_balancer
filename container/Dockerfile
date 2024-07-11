@@ -3,9 +3,8 @@ COPY ./src/ /home/hub/
 COPY ./20-hub /etc/sudoers.d/
 COPY ./env_setup /root/
 COPY ./custom/user_files/ /home/hub/user_files/
-COPY ./custom/user_script_files/ /home/hub/user_script_files/
 COPY ./custom/user_init.sh /home/hub/
-COPY ./custom/global_files/ /home/hub/global_files/
+COPY ./custom/global_files/ /root/global_files/
 COPY ./custom/global_init.sh /root/
 COPY ./custom/sudoers.custom.d/ /etc/sudoers.d/sudoers.custom.d/
 RUN apt update
