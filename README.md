@@ -6,8 +6,8 @@
 - making the created users having a randomly generated password.
 - Installing software and configuring the root user
 - copying files within the user directory by putting files inside "user_files"
+- Executing a script to customize temporary users and root user.
 
 ## Feature not available now
 - having the same ssh key at each restart to avoid having to delete a public key each time
-- Executing a script to customize each user.
 - Having custom scripts to help customize user.
