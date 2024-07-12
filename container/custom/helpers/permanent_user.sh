@@ -1,3 +1,5 @@
+username="example"
+
 useradd $username
 # sed -i -e "s/\/bin\/sh/\/usr\/bin\/bash/" /etc/passwd
 # mkdir "/home/$username"
