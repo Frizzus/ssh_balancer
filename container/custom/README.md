@@ -11,7 +11,8 @@ Heres how looks the `custom` directory
 ├── user_files
 │   ├── ...
 │   └── ...
-└── user_init.sh
+├── user_init.sh
+└── profile.sh
 ```
 
 ## The differences between `global` and `user`
@@ -52,3 +53,6 @@ Some example of what you can do :
 
 #### user_files
 All files/directories of this directory will be added to the `/home/hub/user_files/` directory. You can access them from the user_init.sh file.
+
+#### profile.sh
+This file will be copied as `.profile` for each temporary user. This is a great file to add shell customization or PATH.

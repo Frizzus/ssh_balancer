@@ -8,5 +8,4 @@
 # - $username : the complete username of the temporary user
 # - $user_pass : the password of the temporary user (randomly generated)
 
-. ./user_script_files/cyber_challenge_user.sh
 
