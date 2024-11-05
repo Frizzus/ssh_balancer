@@ -16,15 +16,15 @@ do
 done
 username="${USERNAME}${count}"
 echo -n "$username" >> $user_pool_file
-user_pass=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9%-=' | fold -w 32 | head -n 1)
 
+user_pass=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9%-=' | fold -w 32 | head -n 1)
 sudo useradd $username
 sudo sed -i -e "s/\/bin\/sh/\/usr\/bin\/bash/" /etc/passwd
 sudo mkdir "/home/$username"
 sudo cp -r ./user_files/* "/home/$username/"
 sudo cp ./profile.sh "/home/$username/.profile"
 sudo chown -R $username:$username "/home/$username/"
-sudo chmod -R 750 "/home/$username"
+sudo chmod -R 700 "/home/$username"
 echo "$username:$user_pass" | sudo chpasswd
 
 . ./user_init.sh
