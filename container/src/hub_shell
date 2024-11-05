@@ -4,19 +4,17 @@ source .env
 
 user_pool_file="./user_pool"
 count=0
-if test ! -e ./user_pool
+if test ! -e "$user_pool_file"
 then 
-  touch ./user_pool
-  echo "$USERNAME$count" >> $user_pool_file
+  touch $user_pool_file
 fi
 
 
-username=${USERNAME}
 while grep -q "${USERNAME}${count}" $user_pool_file
 do 
   count=`expr $count + 1`
-  username="${USERNAME}${count}"
 done
+username="${USERNAME}${count}"
 echo -n "$username" >> $user_pool_file
 user_pass=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9%-=' | fold -w 32 | head -n 1)
 
